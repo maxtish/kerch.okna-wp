@@ -1,0 +1,9 @@
+.gallery-grid__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 20px;
+  justify-content: space-between;
+}

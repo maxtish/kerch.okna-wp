@@ -1,0 +1,10 @@
+.popup__title-gallery {
+  margin: 10px 0 0;
+  max-width: 291px;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 23px;
+  line-height: 15px;
+
+  color: #ffffff;
+}

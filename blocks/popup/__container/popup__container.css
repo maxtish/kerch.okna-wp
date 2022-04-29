@@ -1,0 +1,19 @@
+.popup__container {
+  width: 410px;
+  padding: 50px;
+  position: relative;
+  max-width: 75vw;
+  max-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px;
+  background: rgb(123, 173, 251);
+  background: linear-gradient(
+    0deg,
+    rgba(123, 173, 251, 1) 0%,
+    rgba(11, 118, 173, 1) 100%
+  );
+}

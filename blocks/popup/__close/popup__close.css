@@ -1,0 +1,29 @@
+.popup__close {
+  position: absolute;
+  top: calc(-32px - 8px);
+  right: calc(-32px - 8px);
+  align-self: flex-end;
+  width: 32px;
+  height: 32px;
+  background: none; /* сброс стилей кнопки */
+  color: inherit;
+  border: none;
+  padding: 0;
+  background-image: url(../../../images/close.svg);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.popup__close:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 550px) {
+  .popup__close {
+    width: 20px;
+    height: 20px;
+    top: calc(-20px - 16px);
+    right: 0;
+    background-size: cover;
+  }
+}

@@ -10,6 +10,7 @@
     <link rel="dns-prefetch preconnect" href="https://i.ytimg.com/">
     <link rel="dns-prefetch preconnect" href="https://mc.yandex.ru/">
     <link rel="dns-prefetch preconnect" href="https://api-maps.yandex.ru/">
+
     <!-- 
     <link rel="apple-touch-icon" sizes="180x180" href="wp-content/themes/wp/img/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">   
@@ -66,7 +67,7 @@
     <link rel='stylesheet' id='ukit-min-css' href='wp-content/themes/wp/inc/css/uikit.wp.min.css@ver=5.8.4.css'
         media='all' />
     <link rel='stylesheet' id='custom-css' href='wp-content/themes/wp/inc/css/custom.css@ver=5.8.4.css' media='all' />
-
+    <link rel="stylesheet" href="./pages/index.css">
 </head>
 
 <body
@@ -185,11 +186,7 @@
                 <div class="uk-text-right">
                     <p class="uk-text-muted" style="line-height:1;">
 
-                        <!-- Блок подменного телефона
-						<a class="uk-link-reset uk-text-large uk-text-bold phone-line" style="line-height:1;font-size:26px;" href="tel:+7<1?= preg_replace('/[^0-9]/', '', substr($GLOBALS['_OFFICE']['P']['PHONE']['~VALUE'], 1)); ?>">8 978 721 21 00
-</a>
-						<br><span class="uk-text-small" style="line-height:1;"><1?= nl2br($GLOBALS['_OFFICE']['P']['WORK']['~VALUE']); ?></span>
-						-->
+
 
                         <a class="uk-link-reset uk-text-large uk-text-bold phone-line"
                             style="line-height:1;font-size:26px;" href="tel:+79787212100">8 978 721-21-00
@@ -205,11 +202,7 @@
         </div>
     </header>
 
-    <!-- <div class="site-branding">
-							<h1 class="site-title"><a href="" rel="home"></a></h1>
-								<p class="site-title"><a href="" rel="home"></a></p>
-								<p class="site-description"></p>
-					</div>.site-branding -->
+
 
     <div id="menu" class="uk-background-default uk-visible@m uk-sticky "
         uk-sticky="show-on-up: true; animation: uk-animation-slide-top; bottom: #rs-slider; cls-active: uk-box-shadow-medium; target: true"
@@ -229,14 +222,7 @@
                     <li id="menu-item-8"
                         class="uk-flex-auto menu-item menu-item-type-custom menu-item-object-custom menu-item-8"><a
                             href="index.html@p=23.html">Остекление коттеджей</a></li>
-                    <!-- 
-                         <li id="menu-item-9"
-                        class="uk-flex-auto menu-item menu-item-type-custom menu-item-object-custom menu-item-9"><a
-                            href="index.html@p=31.html">Деревянные окна</a></li>
-                    <li id="menu-item-627"
-                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-627"><a
-                            href="index.html@p=575.html">Готовые окна</a></li>
-                             -->
+
                     <li id="menu-item-10"
                         class="uk-flex-auto menu-item menu-item-type-custom menu-item-object-custom menu-item-10"><a
                             href="index.html#contact">Контакты</a></li>
@@ -248,13 +234,13 @@
         <div id="barba-wrapper" aria-live="polite">
             <div class="barba-container">
                 <section class="uk-position-relative uk-width-1-1 uk-inline">
-                    <!-- <div class="custom-slide uk-section uk-background-top-center uk-background-cover uk-background-image@m" style="background-image: url('/img/new-banner-girl3.jpg');"> -->
+
 
                     <div class="custom-slide uk-section uk-background-top-center uk-background-cover uk-background-image@m"
                         style="background-image: url('wp-content/uploads/2021/07/ro-2020-1920x700-1.jpg');">
 
                         <div class="uk-padding-large uk-padding-remove-top uk-padding-remove-horizontal">
-                            <!-- <div class="uk-hidden@s uk-container uk-background-cover uk-position-relative banner" data-src="/img/rusokon-okna-mob.jpg" data-uk-img> -->
+
 
                             <div class="uk-hidden@s uk-container uk-background-cover uk-position-relative banner"
                                 data-src="./images/ro-2020-640x640-1.jpg" data-uk-img="">
@@ -268,7 +254,7 @@
                                 </p>
                                 <div class="banner__button__order uk-position-bottom-right uk-light uk-background-contain uk-text-center"
                                     data-src="./wp-content/themes/wp/img/balcon/pink-mob-button.svg" data-uk-img="">
-                                    <!-- <img src="/img/pink-mob-button.svg" width="175" alt="order"> -->
+
                                     <span
                                         class="banner__button__order__text uk-h4 uk-text-bold uk-text-uppercase uk-position-bottom-right uk-margin-remove">Оставить<br>
                                         заявку</span>
@@ -276,7 +262,7 @@
                                 </div>
                             </div>
 
-                            <!-- <div class="uk-height-medium uk-background-cover uk-hidden@m uk-visible@s" data-src="/img/new-banner-girl3-small.jpg" data-uk-img></div> -->
+
 
                             <div class="uk-height-medium uk-background-cover uk-hidden@m uk-visible@s"
                                 data-src="./wp-content/uploads/2021/07/ro-2020-960x300-1.jpg" data-uk-img=""></div>
@@ -314,8 +300,11 @@
                                                     <p role="status" aria-live="polite" aria-atomic="true"></p>
                                                     <ul></ul>
                                                 </div>
-                                                <form action="index.html#wpcf7-f14-o1" method="post"
-                                                    class="wpcf7-form init" novalidate="novalidate" data-status="init">
+
+                                                <form class="wpcf7-form init popup__form" enctype="multipart/form-data"
+                                                    method="post" id="form" onsubmit="send(event, 'send.php')">
+
+
                                                     <div style="display: none;">
                                                         <input type="hidden" name="_wpcf7" value="14" />
                                                         <input type="hidden" name="_wpcf7_version" value="5.5.6" />
@@ -337,7 +326,7 @@
                                                             </svg></span>
 
                                                         <span class="wpcf7-form-control-wrap text-81"><input type="text"
-                                                                name="text-81" value="" size="40"
+                                                                name="name" value="" size="40"
                                                                 class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
                                                                 aria-required="true" aria-invalid="false"
                                                                 placeholder="Ваше Имя" /></span>
@@ -354,7 +343,7 @@
                                                             </svg></span>
 
                                                         <span class="wpcf7-form-control-wrap mask-917"><input type="tel"
-                                                                name="mask-917" value=""
+                                                                name="email" value=""
                                                                 class="wpcf7-form-control wpcf7mf-mask wpcf7-mask wpcf7-validates-as-required"
                                                                 size="40" aria-required="1"
                                                                 placeholder="Ваш номер телефона"
@@ -377,27 +366,7 @@
                                                 </form>
                                             </div>
 
-                                            <!-- <form id="form_1529" class="ajax_form uk-margin " name="SIMPLE_FORM_1" action="/" method="POST" enctype="multipart/form-data"><input type="hidden" name="sessid" id="sessid" value="497d575ab0322814c21dc68152a10735"><input type="hidden" name="WEB_FORM_ID" value="1"><input type="hidden" name="web_form_submit" value="Y">
-<input id="form_text_3" class="inputtext" type="hidden" name="form_text_3" value="" size="0">
 
-
-<div class="uk-margin">
-	<div class="uk-inline uk-width-1-1">
-		<span class="uk-form-icon uk-icon" uk-icon="icon: iconmonstr-user-1; ratio:.7"><svg xmlns="http://www.w3.org/2000/svg" width="16.799999999999997" height="16.799999999999997" viewBox="0 0 24 24" data-svg="iconmonstr-user-1"><path d="M20.822 18.096c-3.439-.794-6.64-1.49-5.09-4.418 4.72-8.912 1.251-13.678-3.732-13.678-5.082 0-8.464 4.949-3.732 13.678 1.597 2.945-1.725 3.641-5.09 4.418-3.073.71-3.188 2.236-3.178 4.904l.004 1h23.99l.004-.969c.012-2.688-.092-4.222-3.176-4.935z"></path></svg></span>
-		<input class="uk-input" type="text" name="form_text_1" placeholder="Ваше имя">
-	</div>
-</div>
-<div class="uk-margin">
-	<div class="uk-inline uk-width-1-1">
-		<span class="uk-form-icon uk-icon" uk-icon="icon: iconmonstr-phone-3; ratio: .7"><svg xmlns="http://www.w3.org/2000/svg" width="16.799999999999997" height="16.799999999999997" viewBox="0 0 24 24" data-svg="iconmonstr-phone-3"><path d="M18.48 22.926l-1.193.658c-6.979 3.621-19.082-17.494-12.279-21.484l1.145-.637 3.714 6.467-1.139.632c-2.067 1.245 2.76 9.707 4.879 8.545l1.162-.642 3.711 6.461zm-9.808-22.926l-1.68.975 3.714 6.466 1.681-.975-3.715-6.466zm8.613 14.997l-1.68.975 3.714 6.467 1.681-.975-3.715-6.467z"></path></svg></span>
-		<input class="uk-input" type="tel" name="form_text_2" placeholder="Ваш номер телефона" pattern="\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}" required="">
-	</div>
-</div>
-<div>
-	<button class="uk-button uk-button-primary uk-padding-small uk-padding-remove-vertical uk-width-1-1" type="submit">Оставить заявку</button>
-</div>
-
-</form> -->
 
                                         </div>
                                     </div>
@@ -412,60 +381,7 @@
                             <div class="uk-overlay-primary uk-padding-small">
                                 <div class="uk-flex-middle uk-child-width-1-4 uk-grid-small uk-grid" uk-grid="">
                                     <div class="uk-first-column">
-                                        <!--  <div class="uk-flex-middle uk-grid-small uk-grid">
-                                            <div class="uk-width-auto">
-                                                <img data-src="./wp-content/themes/wp/img/icon-tovar-goda.png"
-                                                    alt="Товар года" width="50" height="50" uk-img=""
-                                                    src="wp-content/themes/wp/img/icon-tovar-goda.png">
-                                            </div>
-                                            <div class="uk-width-expand">
-                                                <p class="uk-text-middle">Победитель премии<br><span
-                                                        class="uk-text-bold">Товар года</span></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="uk-flex-middle uk-grid-small uk-grid">
-                                            <div class="uk-width-auto">
-                                                <img data-src="./wp-content/themes/wp/img/icon-zolot-okno.png"
-                                                    alt="Золотое окно" width="50" height="50" uk-img=""
-                                                    src="wp-content/themes/wp/img/icon-zolot-okno.png">
-                                            </div>
-                                            <div class="uk-width-expand">
-                                                <p class="uk-text-middle">Победитель премии<br><span
-                                                        class="uk-text-bold">Золотое окно</span></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="uk-flex-middle uk-grid-small uk-grid">
-                                            <div class="uk-width-auto">
-                                                <img data-src="./wp-content/themes/wp/img/icon-ntv.png"
-                                                    alt="Квартирный вопрос" width="50" height="50" uk-img=""
-                                                    src="wp-content/themes/wp/img/icon-ntv.png">
-                                            </div>
-                                            <div class="uk-width-expand">
-                                                <p class="uk-text-middle">Участник программы<br><span
-                                                        class="uk-text-bold">Квартирный вопрос</span></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="uk-flex-middle uk-grid-small uk-grid">
-                                            <div class="uk-width-auto">
-                                                <img data-src="./wp-content/themes/wp/img/ren-tv-logo.svg"
-                                                    alt="Школа ремонта" width="50" height="50" uk-img=""
-                                                    src="wp-content/themes/wp/img/ren-tv-logo.svg">
-                                            </div>
-                                            <div class="uk-width-expand">
-                                                <p class="uk-text-middle">Участник программы<br><span
-                                                        class="uk-text-bold">Школа ремонта</span></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
 
--->
                                     </div>
                                 </div>
                             </div>
@@ -616,11 +532,7 @@
                                             </a>
                                         </div>
                                     </div>
-                                    <!-- <p class="uk-h2 uk-margin">от 3 600 руб./м<sup><small>2</small></sup>
-						<span class="uk-float-right uk-visible@s">
-							<img src="./wp-content/themes/wp/img/icon-visa.png" alt="Принимаем оплату">
-						</span>
-					</p> -->
+
                                     <hr class="uk-hr">
                                     <p>
                                     <p>Технологичный продукт нового поколения. 5-ти камерный профиль шириной 70 мм,
@@ -808,32 +720,7 @@
                                     </div>
                                 </div>
 
-                                <!-- <h2 class="uk-modal-title">Окно на кухню</h2>
-							<hr class="uk-hr">
-							<p>Каждой хозяйке важно, чтобы на&nbsp;кухне все было не&nbsp;только красиво, но&nbsp;и&nbsp;функционально.</p>
-							<p>Нижняя глухая часть окна позволит использовать ваш подоконник, как дополнительную рабочую поверхность, особенно учитывая, что подоконник с&nbsp;термостойким покрытием и&nbsp;более прочными стенками, за&nbsp;счет увеличенной толщины.</p>
-							<p>Две верхние створки&nbsp;— рабочие, что соответствует требованиям безопасности по&nbsp;установке оконных блоков выше 1-го этажа. Теперь вы&nbsp;сможете помыть окно без каких-либо затруднений!</p>
-							<p>Щелевое проветривание и&nbsp;энергосберегающее стекло&nbsp;— не&nbsp;даст запотевать стеклопакету в&nbsp;момент приготовления пищи.</p>
-							<p>Откосные панели CleanPro превратят уборку в&nbsp;простой и&nbsp;быстрый процесс.</p>
-							<div class="uk-child-width-1-2@m uk-grid" uk-grid="">
-								<div>
-									<h4>Наше окно включает в себя:</h4>
-									<ul class="uk-list uk-list-bullet">
-										<li>профильная система KBE GUT</li>
-										<li>стеклопакет 32 мм с i-стеклом</li>
-										<li>фурнитура ROTO поворотно откидная</li>
-										<li>подоконник Кристаллит</li>
-										<li>откосные панели</li>
-									</ul>
-								</div>
-								<div>
-									<h4>Мы рекомендуем к окну:</h4>
-									<ul class="uk-list uk-list-bullet">
-										<li>москитная сетка</li>
-										<li>римская штора</li>
-									</ul>
-								</div>
-							</div> -->
+
                             </div>
                         </div>
 
@@ -1328,8 +1215,12 @@
                                         <p role="status" aria-live="polite" aria-atomic="true"></p>
                                         <ul></ul>
                                     </div>
-                                    <form action="index.html#wpcf7-f15-o2" method="post" class="wpcf7-form init"
-                                        novalidate="novalidate" data-status="init">
+
+                                    <form class="wpcf7-form init popup__form" enctype="multipart/form-data"
+                                        method="post" id="form" onsubmit="send(event, 'send.php')">
+
+
+
                                         <div style="display: none;">
                                             <input type="hidden" name="_wpcf7" value="15" />
                                             <input type="hidden" name="_wpcf7_version" value="5.5.6" />
@@ -1351,7 +1242,7 @@
                                                     </svg></span>
 
                                                 <span class="wpcf7-form-control-wrap text-81"><input type="text"
-                                                        name="text-81" value="" size="40"
+                                                        name="name" value="" size="40"
                                                         class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
                                                         aria-required="true" aria-invalid="false"
                                                         placeholder="Ваше Имя" /></span>
@@ -1368,7 +1259,7 @@
                                                     </svg></span>
 
                                                 <span class="wpcf7-form-control-wrap mask-917"><input type="tel"
-                                                        name="mask-917" value=""
+                                                        name="email" value=""
                                                         class="wpcf7-form-control wpcf7mf-mask wpcf7-mask wpcf7-validates-as-required"
                                                         size="40" aria-required="1" placeholder="Ваш номер телефона"
                                                         data-mask="+7 ( ___ ) ___-__-__" /></span>
@@ -1461,359 +1352,7 @@
                             </div>
                         </div>
                     </section>
-                    <!--<section class="uk-section uk-section-muted">
 
-                        <div class="uk-switcher">
-                            <div class="uk-active">
-                                <div class="uk-slideshow" uk-slideshow="animation: push; maxHeight: 490">
-                                    <div class="uk-position-relative uk-visible-toggle">
-                                        <div
-                                            class="uk-position-relative uk-background-defaul uk-padding-small uk-box-shadow-medium">
-
-                                            <ul class="uk-slideshow-items uk-text-center" uk-lightbox=""
-                                                style="min-height: 489.375px;">
-                                                <li tabindex="-1" class="uk-transition-active"
-                                                    style="transform: translate3d(0px, 0px, 0px); z-index: 0;">
-                                                    <img class="uk-cover"
-                                                        data-src="./wp-content/uploads/2021/07/slide-kv-1.jpg"
-                                                        width="820" height="490" alt="Световое счастье" uk-cover=""
-                                                        uk-img="target: !.uk-slideshow-items"
-                                                        src="wp-content/uploads/2021/07/slide-kv-1.jpg"
-                                                        style="height: 520px; width: 870px;">
-                                                    <div
-                                                        class="uk-overlay uk-overlay-default uk-position-bottom uk-visible@s uk-padding-small uk-text-bold uk-transition-slide-bottom">
-                                                        <p>Световое счастье. Пятистворчатое окно из 5-камерного
-                                                            профиля (KBE Expert). Энергосберегающий стеклопакет.
-                                                            Ручки серии Roto line, серебро, от Roto.</p>
-                                                    </div>
-                                                    <a class="uk-position-cover"
-                                                        href="wp-content/uploads/2021/07/slide-kv-1.jpg"
-                                                        caption="Световое счастье. Пятистворчатое окно из 5-камерного профиля (KBE Expert). Энергосберегающий стеклопакет. Ручки серии Roto line, серебро, от Roto."></a>
-                                                </li>
-                                                <li tabindex="-1" class="uk-transition-active"
-                                                    style="transform: translate3d(0px, 0px, 0px); z-index: 0;">
-                                                    <img class="uk-cover"
-                                                        data-src="./wp-content/uploads/2021/07/slide-kv-2.jpg"
-                                                        width="820" height="490" alt="Уютные моменты" uk-cover=""
-                                                        uk-img="target: !.uk-slideshow-items"
-                                                        src="wp-content/uploads/2021/07/slide-kv-2.jpg"
-                                                        style="height: 520px; width: 870px;">
-                                                    <div
-                                                        class="uk-overlay uk-overlay-default uk-position-bottom uk-visible@s uk-padding-small uk-text-bold uk-transition-slide-bottom">
-                                                        <p>Уютные моменты. 3 окна из 5-камерного профиля (KBE
-                                                            Expert). Энергосберегающий стеклопакет. Белые ручки
-                                                            серии Roto line от Roto.</p>
-                                                    </div>
-                                                    <a class="uk-position-cover"
-                                                        href="wp-content/uploads/2021/07/slide-kv-2.jpg"
-                                                        caption="Уютные моменты. 3 окна из 5-камерного профиля (KBE Expert). Энергосберегающий стеклопакет. Белые ручки серии Roto line от Roto."></a>
-                                                </li>
-                                                <li tabindex="-1" class="uk-transition-active"
-                                                    style="transform: translate3d(0px, 0px, 0px); z-index: 0;">
-                                                    <img class="uk-cover"
-                                                        data-src="./wp-content/uploads/2021/07/slide-kv-3.jpg"
-                                                        width="820" height="490" alt="Классика пространства" uk-cover=""
-                                                        uk-img="target: !.uk-slideshow-items"
-                                                        src="wp-content/uploads/2021/07/slide-kv-3.jpg"
-                                                        style="height: 520px; width: 870px;">
-                                                    <div
-                                                        class="uk-overlay uk-overlay-default uk-position-bottom uk-visible@s uk-padding-small uk-text-bold uk-transition-slide-bottom">
-                                                        <p>Классика пространства. Балкон с двустворчатым окном из
-                                                            5-камерного профиля (KBE Expert). Энергосберегающий
-                                                            стеклопакет. Белые ручки серии Roto line от Roto.</p>
-                                                    </div>
-                                                    <a class="uk-position-cover"
-                                                        href="wp-content/uploads/2021/07/slide-kv-3.jpg"
-                                                        caption="Классика пространства. Балкон с двустворчатым окном из 5-камерного профиля (KBE Expert). Энергосберегающий стеклопакет. Белые ручки серии Roto line от Roto."></a>
-                                                </li>
-                                                <li tabindex="-1" class="uk-transition-active"
-                                                    style="transform: translate3d(0px, 0px, 0px); z-index: 0;">
-                                                    <img class="uk-cover"
-                                                        data-src="./wp-content/uploads/2021/07/slide-kv-4.jpg"
-                                                        width="820" height="490" alt="Окно в большой мир" uk-cover=""
-                                                        uk-img="target: !.uk-slideshow-items"
-                                                        src="wp-content/uploads/2021/07/slide-kv-4.jpg"
-                                                        style="height: 520px; width: 870px;">
-                                                    <div
-                                                        class="uk-overlay uk-overlay-default uk-position-bottom uk-visible@s uk-padding-small uk-text-bold uk-transition-slide-bottom">
-                                                        <p>Окно в большой мир. Четырехстворчатое окно из 5-камерного
-                                                            профиля (KBE Expert). Энергосберегающий стеклопакет.
-                                                            Белые ручки серии Roto line от Roto.</p>
-                                                    </div>
-                                                    <a class="uk-position-cover"
-                                                        href="wp-content/uploads/2021/07/slide-kv-4.jpg"
-                                                        caption="Окно в большой мир. Четырехстворчатое окно из 5-камерного профиля (KBE Expert). Энергосберегающий стеклопакет. Белые ручки серии Roto line от Roto."></a>
-                                                </li>
-                                                <li tabindex="-1" class="uk-transition-active"
-                                                    style="transform: translate3d(0px, 0px, 0px); z-index: 0;">
-                                                    <img class="uk-cover"
-                                                        data-src="./wp-content/uploads/2021/07/slide-kv-5.jpg"
-                                                        width="820" height="490" alt="Пейзаж а-ля натюрэль" uk-cover=""
-                                                        uk-img="target: !.uk-slideshow-items"
-                                                        src="wp-content/uploads/2021/07/slide-kv-5.jpg"
-                                                        style="height: 520px; width: 870px;">
-                                                    <div
-                                                        class="uk-overlay uk-overlay-default uk-position-bottom uk-visible@s uk-padding-small uk-text-bold uk-transition-slide-bottom">
-                                                        <p>Пейзаж а-ля натюрэль. Двустворчатое окно из 5-камерного
-                                                            профиля (KBE Expert). Энергосберегающий стеклопакет.
-                                                            Белые ручки серии Roto line от Roto.</p>
-                                                    </div>
-                                                    <a class="uk-position-cover"
-                                                        href="wp-content/uploads/2021/07/slide-kv-5.jpg"
-                                                        caption="Пейзаж а-ля натюрэль. Двустворчатое окно из 5-камерного профиля (KBE Expert). Энергосберегающий стеклопакет. Белые ручки серии Roto line от Roto."></a>
-                                                </li>
-                                                <li tabindex="-1" class="uk-transition-active"
-                                                    style="transform: translate3d(0px, 0px, 0px); z-index: 0;">
-                                                    <img class="uk-cover"
-                                                        data-src="./wp-content/uploads/2021/07/slide-kv-6.jpg"
-                                                        width="820" height="490" alt="Свет от пола до потолка"
-                                                        uk-cover="" uk-img="target: !.uk-slideshow-items"
-                                                        src="wp-content/uploads/2021/07/slide-kv-6.jpg"
-                                                        style="height: 520px; width: 870px;">
-                                                    <div
-                                                        class="uk-overlay uk-overlay-default uk-position-bottom uk-visible@s uk-padding-small uk-text-bold uk-transition-slide-bottom">
-                                                        <p>Свет от пола до потолка. Балконный блок с одностворчатым
-                                                            окном из 5-камерного профиля (KBE Expert).
-                                                            Энергосберегающий стеклопакет. Ручки серии Roto line,
-                                                            серебро, от Roto.</p>
-                                                    </div>
-                                                    <a class="uk-position-cover"
-                                                        href="wp-content/uploads/2021/07/slide-kv-6.jpg"
-                                                        caption="Свет от пола до потолка. Балконный блок с одностворчатым окном из 5-камерного профиля (KBE Expert). Энергосберегающий стеклопакет. Ручки серии Roto line, серебро, от Roto."></a>
-                                                </li>
-                                            </ul>
-                                            <a class="uk-slidenav-large uk-position-center-left uk-position-medium uk-hidden-hover uk-visible@m uk-icon uk-slidenav-previous uk-slidenav"
-                                                uk-slidenav-previous="" uk-slideshow-item="previous"><svg width="25px"
-                                                    height="40px" viewBox="0 0 25 40" xmlns="http://www.w3.org/2000/svg"
-                                                    data-svg="slidenav-previous-large">
-                                                    <polyline fill="none" stroke="#000" stroke-width="2"
-                                                        points="20.527,1.5 2,20.024 20.525,38.547 "></polyline>
-                                                </svg></a>
-                                            <a class="uk-slidenav-large uk-position-center-right uk-position-medium uk-hidden-hover uk-visible@m uk-icon uk-slidenav-next uk-slidenav"
-                                                uk-slidenav-next="" uk-slideshow-item="next"><svg width="25px"
-                                                    height="40px" viewBox="0 0 25 40" xmlns="http://www.w3.org/2000/svg"
-                                                    data-svg="slidenav-next-large">
-                                                    <polyline fill="none" stroke="#000" stroke-width="2"
-                                                        points="4.002,38.547 22.527,20.024 4,1.5 "></polyline>
-                                                </svg></a>
-                                        </div>
-                                        <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin-medium">
-                                            <li uk-slideshow-item="0" class="uk-active"><a href="index.html#"></a>
-                                            </li>
-                                            <li uk-slideshow-item="1"><a href="index.html#"></a></li>
-                                            <li uk-slideshow-item="2"><a href="index.html#"></a></li>
-                                            <li uk-slideshow-item="3"><a href="index.html#"></a></li>
-                                            <li uk-slideshow-item="4"><a href="index.html#"></a></li>
-                                            <li uk-slideshow-item="5"><a href="index.html#"></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="uk-slideshow" uk-slideshow="animation: push; maxHeight: 630">
-                                    <div class="uk-position-relative uk-visible-toggle">
-                                        <div
-                                            class="uk-position-relative uk-background-defaul uk-padding-small uk-box-shadow-medium">
-                                            <ul class="uk-slideshow-items uk-text-center" uk-lightbox="">
-                                                <li tabindex="-1" class="uk-transition-active"
-                                                    style="transform: translate3d(0px, 0px, 0px); z-index: 0;">
-                                                    <img class="uk-cover"
-                                                        data-src="./wp-content/uploads/2021/07/video-poster-1.jpg"
-                                                        width="960" height="630" alt="Участник программы «Фазенда»"
-                                                        uk-cover="" uk-img="target: !.uk-slideshow-items"
-                                                        src="wp-content/uploads/2021/07/video-poster-1.jpg" />
-                                                    <div class=" noise-overlay uk-position-cover">
-                                                    </div>
-                                                    <div
-                                                        class="uk-position-center uk-overlay uk-background-primary uk-border-circle uk-light uk-padding-small uk-box-shadow-medium">
-                                                        <span class="uk-icon" uk-icon="icon: play; ratio: 3"><svg
-                                                                width="60" height="60" viewBox="0 0 20 20"
-                                                                xmlns="http://www.w3.org/2000/svg" data-svg="play">
-                                                                <polygon fill="none" stroke="#000"
-                                                                    points="6.5,5 14.5,10 6.5,15"></polygon>
-                                                            </svg></span>
-                                                    </div>
-                                                    <div
-                                                        class="uk-overlay uk-overlay-default uk-position-bottom uk-visible@s uk-padding-small uk-text-bold uk-transition-slide-bottom">
-                                                        <p>Детская на гусеницах</p>
-                                                    </div>
-                                                    <a class="uk-position-cover" href="https://youtu.be/dghKuWWpkEQ"
-                                                        caption="WinPlast — участник программ «Фазенда» и «Школа ремонта»"
-                                                        rel="nofollow noopener noreferrer"></a>
-
-                                                </li>
-                                                <li tabindex="-1" class="uk-transition-active"
-                                                    style="transform: translate3d(0px, 0px, 0px); z-index: 0;">
-                                                    <img class="uk-cover"
-                                                        data-src="./wp-content/uploads/2021/07/video-poster-2.jpg"
-                                                        width="960" height="630" alt="Участник программы «Фазенда»"
-                                                        uk-cover="" uk-img="target: !.uk-slideshow-items"
-                                                        src="wp-content/uploads/2021/07/video-poster-2.jpg" />
-                                                    <div class=" noise-overlay uk-position-cover">
-                                                    </div>
-                                                    <div
-                                                        class="uk-position-center uk-overlay uk-background-primary uk-border-circle uk-light uk-padding-small uk-box-shadow-medium">
-                                                        <span class="uk-icon" uk-icon="icon: play; ratio: 3"><svg
-                                                                width="60" height="60" viewBox="0 0 20 20"
-                                                                xmlns="http://www.w3.org/2000/svg" data-svg="play">
-                                                                <polygon fill="none" stroke="#000"
-                                                                    points="6.5,5 14.5,10 6.5,15"></polygon>
-                                                            </svg></span>
-                                                    </div>
-                                                    <div
-                                                        class="uk-overlay uk-overlay-default uk-position-bottom uk-visible@s uk-padding-small uk-text-bold uk-transition-slide-bottom">
-                                                        <p>Лоскутная стена</p>
-                                                    </div>
-                                                    <a class="uk-position-cover" href="https://youtu.be/3WtGed_KWjE"
-                                                        caption="WinPlast — участник программ «Фазенда» и «Школа ремонта»"
-                                                        rel="nofollow noopener noreferrer"></a>
-
-                                                </li>
-                                                <li tabindex="-1" class="uk-transition-active"
-                                                    style="transform: translate3d(0px, 0px, 0px); z-index: 0;">
-                                                    <img class="uk-cover"
-                                                        data-src="./wp-content/uploads/2021/07/video-poster-3.jpg"
-                                                        width="960" height="630" alt="Участник программы «Фазенда»"
-                                                        uk-cover="" uk-img="target: !.uk-slideshow-items"
-                                                        src="wp-content/uploads/2021/07/video-poster-3.jpg" />
-                                                    <div class=" noise-overlay uk-position-cover">
-                                                    </div>
-                                                    <div
-                                                        class="uk-position-center uk-overlay uk-background-primary uk-border-circle uk-light uk-padding-small uk-box-shadow-medium">
-                                                        <span class="uk-icon" uk-icon="icon: play; ratio: 3"><svg
-                                                                width="60" height="60" viewBox="0 0 20 20"
-                                                                xmlns="http://www.w3.org/2000/svg" data-svg="play">
-                                                                <polygon fill="none" stroke="#000"
-                                                                    points="6.5,5 14.5,10 6.5,15"></polygon>
-                                                            </svg></span>
-                                                    </div>
-                                                    <div
-                                                        class="uk-overlay uk-overlay-default uk-position-bottom uk-visible@s uk-padding-small uk-text-bold uk-transition-slide-bottom">
-                                                        <p>Кухня с выходом в свет</p>
-                                                    </div>
-                                                    <a class="uk-position-cover" href="https://youtu.be/3dcuTjgRRFc"
-                                                        caption="WinPlast — участник программ «Фазенда» и «Школа ремонта»"
-                                                        rel="nofollow noopener noreferrer"></a>
-
-                                                </li>
-                                                <li tabindex="-1" class="uk-transition-active"
-                                                    style="transform: translate3d(0px, 0px, 0px); z-index: 0;">
-                                                    <img class="uk-cover"
-                                                        data-src="./wp-content/uploads/2021/07/video-poster-4.jpg"
-                                                        width="960" height="630" alt="Участник программы «Фазенда»"
-                                                        uk-cover="" uk-img="target: !.uk-slideshow-items"
-                                                        src="wp-content/uploads/2021/07/video-poster-4.jpg" />
-                                                    <div class=" noise-overlay uk-position-cover">
-                                                    </div>
-                                                    <div
-                                                        class="uk-position-center uk-overlay uk-background-primary uk-border-circle uk-light uk-padding-small uk-box-shadow-medium">
-                                                        <span class="uk-icon" uk-icon="icon: play; ratio: 3"><svg
-                                                                width="60" height="60" viewBox="0 0 20 20"
-                                                                xmlns="http://www.w3.org/2000/svg" data-svg="play">
-                                                                <polygon fill="none" stroke="#000"
-                                                                    points="6.5,5 14.5,10 6.5,15"></polygon>
-                                                            </svg></span>
-                                                    </div>
-                                                    <div
-                                                        class="uk-overlay uk-overlay-default uk-position-bottom uk-visible@s uk-padding-small uk-text-bold uk-transition-slide-bottom">
-                                                        <p>Гостиная по Мондриану</p>
-                                                    </div>
-                                                    <a class="uk-position-cover" href="https://youtu.be/RezpqPaFwmI"
-                                                        caption="WinPlast — участник программ «Фазенда» и «Школа ремонта»"
-                                                        rel="nofollow noopener noreferrer"></a>
-
-                                                </li>
-                                                <li tabindex="-1" class="uk-transition-active"
-                                                    style="transform: translate3d(0px, 0px, 0px); z-index: 0;">
-                                                    <img class="uk-cover"
-                                                        data-src="./wp-content/uploads/2021/07/video-poster-5.jpg"
-                                                        width="960" height="630" alt="Участник программы «Фазенда»"
-                                                        uk-cover="" uk-img="target: !.uk-slideshow-items"
-                                                        src="wp-content/uploads/2021/07/video-poster-5.jpg" />
-                                                    <div class=" noise-overlay uk-position-cover">
-                                                    </div>
-                                                    <div
-                                                        class="uk-position-center uk-overlay uk-background-primary uk-border-circle uk-light uk-padding-small uk-box-shadow-medium">
-                                                        <span class="uk-icon" uk-icon="icon: play; ratio: 3"><svg
-                                                                width="60" height="60" viewBox="0 0 20 20"
-                                                                xmlns="http://www.w3.org/2000/svg" data-svg="play">
-                                                                <polygon fill="none" stroke="#000"
-                                                                    points="6.5,5 14.5,10 6.5,15"></polygon>
-                                                            </svg></span>
-                                                    </div>
-                                                    <div
-                                                        class="uk-overlay uk-overlay-default uk-position-bottom uk-visible@s uk-padding-small uk-text-bold uk-transition-slide-bottom">
-                                                        <p>Трансформеры в серебряном лесу</p>
-                                                    </div>
-                                                    <a class="uk-position-cover" href="https://youtu.be/C7veO-mjv4U"
-                                                        caption="WinPlast — участник программ «Фазенда» и «Школа ремонта»"
-                                                        rel="nofollow noopener noreferrer"></a>
-
-                                                </li>
-                                                <li tabindex="-1" class="uk-transition-active"
-                                                    style="transform: translate3d(0px, 0px, 0px); z-index: 0;">
-                                                    <img class="uk-cover"
-                                                        data-src="./wp-content/uploads/2021/07/video-poster-6.jpg"
-                                                        width="960" height="630" alt="Участник программы «Фазенда»"
-                                                        uk-cover="" uk-img="target: !.uk-slideshow-items"
-                                                        src="wp-content/uploads/2021/07/video-poster-6.jpg" />
-                                                    <div class=" noise-overlay uk-position-cover">
-                                                    </div>
-                                                    <div
-                                                        class="uk-position-center uk-overlay uk-background-primary uk-border-circle uk-light uk-padding-small uk-box-shadow-medium">
-                                                        <span class="uk-icon" uk-icon="icon: play; ratio: 3"><svg
-                                                                width="60" height="60" viewBox="0 0 20 20"
-                                                                xmlns="http://www.w3.org/2000/svg" data-svg="play">
-                                                                <polygon fill="none" stroke="#000"
-                                                                    points="6.5,5 14.5,10 6.5,15"></polygon>
-                                                            </svg></span>
-                                                    </div>
-                                                    <div
-                                                        class="uk-overlay uk-overlay-default uk-position-bottom uk-visible@s uk-padding-small uk-text-bold uk-transition-slide-bottom">
-                                                        <p>Зелёный диван и шкаф в ромбах</p>
-                                                    </div>
-                                                    <a class="uk-position-cover" href="https://youtu.be/zZGgwuHVYeY"
-                                                        caption="WinPlast — участник программ «Фазенда» и «Школа ремонта»"
-                                                        rel="nofollow noopener noreferrer"></a>
-
-                                                </li>
-                                            </ul>
-                                            <a class="uk-slidenav-large uk-position-center-left uk-position-medium uk-hidden-hover uk-visible@m uk-icon uk-slidenav-previous uk-slidenav"
-                                                uk-slidenav-previous="" uk-slideshow-item="previous"><svg width="25px"
-                                                    height="40px" viewBox="0 0 25 40" xmlns="http://www.w3.org/2000/svg"
-                                                    data-svg="slidenav-previous-large">
-                                                    <polyline fill="none" stroke="#000" stroke-width="2"
-                                                        points="20.527,1.5 2,20.024 20.525,38.547 "></polyline>
-                                                </svg></a>
-                                            <a class="uk-slidenav-large uk-position-center-right uk-position-medium uk-hidden-hover uk-visible@m uk-icon uk-slidenav-next uk-slidenav"
-                                                uk-slidenav-next="" uk-slideshow-item="next"><svg width="25px"
-                                                    height="40px" viewBox="0 0 25 40" xmlns="http://www.w3.org/2000/svg"
-                                                    data-svg="slidenav-next-large">
-                                                    <polyline fill="none" stroke="#000" stroke-width="2"
-                                                        points="4.002,38.547 22.527,20.024 4,1.5 "></polyline>
-                                                </svg></a>
-                                        </div>
-                                        <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin-medium">
-                                            <li uk-slideshow-item="0" class="uk-active"><a href="index.html#"></a>
-                                            </li>
-                                            <li uk-slideshow-item="1"><a href="index.html#"></a></li>
-                                            <li uk-slideshow-item="2"><a href="index.html#"></a></li>
-                                            <li uk-slideshow-item="3"><a href="index.html#"></a></li>
-                                            <li uk-slideshow-item="4"><a href="index.html#"></a></li>
-                                            <li uk-slideshow-item="5"><a href="index.html#"></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                </div>
-                <div class="uk-text-center">
-                    <button class="uk-button uk-button-primary" type="button" href="#"
-                        uk-toggle="target: #modal-call">Рассчитать</button>
-                </div>
-
-                </section>
-            -->
                     <section class="uk-section uk-section-default uk-box-shadow-small uk-position-relative">
                         <div class="uk-container uk-text-center">
                             <h2 class="uk-h1 uk-width-xxlarge uk-margin-auto">Отзывы о нас</h2>
@@ -2695,408 +2234,6 @@
 
 
 
-
-                                <!-- <li tabindex="-1" class="">
-                <div class="uk-container uk-container-small">
-                    <div class="uk-background-default uk-box-shadow-medium">
-                        <div class="uk-flex-middle uk-padding uk-child-width-expand@s uk-grid-divider uk-grid" uk-grid="" uk-height-match="target: > div">
-                            <div class="uk-width-auto uk-first-column" style="min-height: 262.141px;">
-                                <h3 class="uk-h3" style="font-weight: 400">Андрей Логинов</h3>
-                                <p class="uk-text-muted">Договор 830.07/16<br> 29.08.2016 в 11:14</p>
-                                <hr class="uk-hr">
-                                <p>3 окна<br> <span class="uk-h3" style="font-weight: 400">54 000 руб.</span></p>
-                                <button class="uk-button uk-button-primary uk-padding-small uk-padding-remove-vertical uk-text-uppercase" href="#" uk-toggle="target: #modal-call">Рассчитать</button>
-                            </div>
-                            <div style="">
-                                <p>Добрый день! В августе 2016 года решили заменить окна, и обратились в компанию "WinPlast". Выбирали между 3 компаниями, но выбор пал на "WinPlast", т.к. менеджер очень приветливо все разъяснила, и цена была минимальная. Договорились о вызове
-                                    замерщика. Замерщик прибыл вовремя, и, что приятно удивило, цена оказалась еще ниже...Договорились о времени монтажа так, как нам было удобно. Окна доставили вовремя и, что опять поразило,установили очень быстро и качественно (три окна за
-                                    день) практически без мусора. Большое спасибо компании "WinPlast", рекомендую!</p>
-                                <div class="uk-text-primary">
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li tabindex="-1">
-                <div class="uk-container uk-container-small">
-                    <div class="uk-background-default uk-box-shadow-medium">
-                        <div class="uk-flex-middle uk-padding uk-child-width-expand@s uk-grid-divider uk-grid" uk-grid="" uk-height-match="target: > div">
-                            <div class="uk-width-auto uk-first-column">
-                                <h3 class="uk-h3" style="font-weight: 400">Светлана</h3>
-                                <p class="uk-text-muted">Договор 488.10/16<br> 06.11.2016 в 14:54</p>
-                                <hr class="uk-hr">
-                                <p>Отделка лоджии<br> <span class="uk-h3" style="font-weight: 400">82 000 руб.</span> под ключ</p>
-                                <button class="uk-button uk-button-primary uk-padding-small uk-padding-remove-vertical uk-text-uppercase" href="#" uk-toggle="target: #modal-call">Рассчитать</button>
-                            </div>
-                            <div style="min-height: 259px;">
-                                <p>Здравствуйте! Хочу поблагодарить подрядчика Алешкина Андрея. На столько мы остались довольны утеплением лоджии, что просто слов нет. Сделано все четко, аккуратно. Теперь дверь на балкон не закрываем так нам тепло и хорошо. Желаю группе компаний
-                                    WinPlast процветания и множество благодарных клиентов.</p>
-                                <div class="uk-text-primary">
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li tabindex="-1">
-                <div class="uk-container uk-container-small">
-                    <div class="uk-background-default uk-box-shadow-medium">
-                        <div class="uk-flex-middle uk-padding uk-child-width-expand@s uk-grid-divider uk-grid" uk-grid="" uk-height-match="target: > div">
-                            <div class="uk-width-auto uk-first-column">
-                                <h3 class="uk-h3" style="font-weight: 400">Вера</h3>
-                                <p class="uk-text-muted">Договор 390.07/16<br> 31.08.2016 в 17:21</p>
-                                <hr class="uk-hr">
-                                <p>балконный блок + окно<br> (однокомнатная квартира)<br> <span class="uk-h3" style="font-weight: 400">40 000 руб.</span></p>
-                                <button class="uk-button uk-button-primary uk-padding-small uk-padding-remove-vertical uk-text-uppercase" href="#" uk-toggle="target: #modal-call">Рассчитать</button>
-                            </div>
-                            <div style="min-height: 283px;">
-                                <p>Установка 12.07.2016 года, два окна с балконной дверью. Подошла к выбору компаний по установке окон внимательно. Заказала замер у двух компаний. В итоге мой выбор пал на WinPlast. Замерщик Николай Носков опытный, вежливый знающий и любящий свое
-                                    дело. Приезжала в офис WinPlast сотрудники, которые там работаю очень доброжелательны, внимательны. Показали весь ассортимент окон и все комплектующие к окнам. Довольна демонтажем и монтажом окон. Компания WinPlast не завышает тарифы на продукцию
-                                    и при этом качество товара (окна) замечательное. Спасибо Вам большое за работу!!!</p>
-                                <div class="uk-text-primary">
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li tabindex="-1">
-                <div class="uk-container uk-container-small">
-                    <div class="uk-background-default uk-box-shadow-medium">
-                        <div class="uk-flex-middle uk-padding uk-child-width-expand@s uk-grid-divider uk-grid" uk-grid="" uk-height-match="target: > div">
-                            <div class="uk-width-auto uk-first-column" style="min-height: 262.141px;">
-                                <h3 class="uk-h3" style="font-weight: 400">Александр</h3>
-                                <p class="uk-text-muted">Договор 15/4000<br> 20.01.2017</p>
-                                <hr class="uk-hr">
-                                <p>5 окон с ламинацией<br> <!-- <span class="uk-h3" style="font-weight: 400">54 000 руб.</span> -->
-                                <!-- </p>
-                                <button class="uk-button uk-button-primary uk-padding-small uk-padding-remove-vertical uk-text-uppercase" href="#" uk-toggle="target: #modal-call">Рассчитать</button>
-                            </div>
-                            <div>
-                                <p>Мы решили, что пора обновить окна, потому как дом у нас сталинка, довольно старый, с прежними жить было уже невозможно. К тому же хотели окошки красивые, с ламинацией, а я так понял, они не у всех компаний есть в ассортименте. Заказали в итоге в Рускокон из чисто прагматических соображений: ламинация под дерево у них имеется, а Анастасия, менеджер, с кем общались, уверила, что все работы выполнят быстро и проблем потом не будет с задуванием и прочим. Цена показалась более чем приемлемой. Замерять приезжал мастер Борис Стародумов. В итоге довольны – все пять окон радуют. Будем советовать компанию знакомым</p>
-                                <div class="uk-text-primary">
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li tabindex="-1">
-                <div class="uk-container uk-container-small">
-                    <div class="uk-background-default uk-box-shadow-medium">
-                        <div class="uk-flex-middle uk-padding uk-child-width-expand@s uk-grid-divider uk-grid" uk-grid="" uk-height-match="target: > div">
-                            <div class="uk-width-auto uk-first-column">
-                                <h3 class="uk-h3" style="font-weight: 400">Музаффар</h3>
-                                <p class="uk-text-muted">Договор 500/4000 <br> 15.02.2017</p>
-                                <hr class="uk-hr">
-                                <p>6 окон<br> <!-- <span class="uk-h3" style="font-weight: 400">54 000 руб.</span> -->
-                                <!--</p>
-                                <button class="uk-button uk-button-primary uk-padding-small uk-padding-remove-vertical uk-text-uppercase" href="#" uk-toggle="target: #modal-call">Рассчитать</button>
-                            </div>
-                            <div style="min-height: 226px;">
-                                <p>Я заказал деревянные окна в «WinPlast» после прочтения отзывов. В сети пишут по-разному, но хорошего больше, к тому же откликов много, значит, активно работают. О своем решении не жалею. Все быстро замерили, смету адекватную составили, установили за день! Приятно теперь смотреть, и сразу стало тепло</p>
-                                <div class="uk-text-primary">
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li tabindex="-1">
-                <div class="uk-container uk-container-small">
-                    <div class="uk-background-default uk-box-shadow-medium">
-                        <div class="uk-flex-middle uk-padding uk-child-width-expand@s uk-grid-divider uk-grid" uk-grid="" uk-height-match="target: > div">
-                            <div class="uk-width-auto uk-first-column" style="min-height: 262.141px;">
-                                <h3 class="uk-h3" style="font-weight: 400">Анастасия и Иван</h3>
-                                <p class="uk-text-muted">Договор 12947/4000</p>
-                                <hr class="uk-hr">
-                                <p>7 окон и 2 двери<br> <!-- <span class="uk-h3" style="font-weight: 400">54 000 руб.</span> -->
-                                <!-- </p>
-                                <button class="uk-button uk-button-primary uk-padding-small uk-padding-remove-vertical uk-text-uppercase" href="#" uk-toggle="target: #modal-call">Рассчитать</button>
-                            </div>
-                            <div>
-                                <p>В компанию “WinPlast” обращались мои родители. Им требовалось обновить 7 окон и 2 двери в коттедже, которому почти 30 лет. До этого стояли обычные старые деревянные окна и двери. Благодаря “WinPlast” теперь стало и красиво, и тепло. Нам с мужем понравилось, да и родители отзываются только положительно: быстро изготовили и установили, все четко по размерам, не к чему придраться. Поэтому теперь и мы решили, по примеру мамы с папой, заказать у “WinPlast” окно и балкон к себе в квартиру. Когда видишь результат своими глазами, никакие уговоры уже не нужны</p>
-                                <div class="uk-text-primary">
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li tabindex="-1">
-                <div class="uk-container uk-container-small">
-                    <div class="uk-background-default uk-box-shadow-medium">
-                        <div class="uk-flex-middle uk-padding uk-child-width-expand@s uk-grid-divider uk-grid" uk-grid="" uk-height-match="target: > div">
-                            <div class="uk-width-auto uk-first-column" style="min-height: 286.141px;">
-                                <h3 class="uk-h3" style="font-weight: 400">Лилия</h3>
-                                <p class="uk-text-muted">Договор 9217/4000 <br> 25.08.2017</p>
-                                <hr class="uk-hr">
-                                <p>3 окна и зимний сад из алюминия<br> <!-- <span class="uk-h3" style="font-weight: 400">54 000 руб.</span> -->
-                                <!--  </p>
-                                <button class="uk-button uk-button-primary uk-padding-small uk-padding-remove-vertical uk-text-uppercase" href="#" uk-toggle="target: #modal-call">Рассчитать</button>
-                            </div>
-                            <div>
-                                <p>Перед тем как сделать заказ в WinPlastе, я тщательно ознакомилась с предложениями других компаний. После разговора с менеджером Анастасией сомнения исчезли, решилась на заказ. Привлекли широкие возможности компании: мы живем в таун хаусе, и хотели не только окошки обновить, но и построить небольшой зимний садик. Замерять приезжал мастер Юрий Ильенко, и, судя по результатам, сработал точно, а ведь замеры – уже половина дела. Выбрали теплый алюминий и для окон, и для сада, и сейчас, с холодами вижу, что правильно сделали. Очень довольна результатом!</p>
-                                <div class="uk-text-primary">
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li tabindex="-1">
-                <div class="uk-container uk-container-small">
-                    <div class="uk-background-default uk-box-shadow-medium">
-                        <div class="uk-flex-middle uk-padding uk-child-width-expand@s uk-grid-divider uk-grid" uk-grid="" uk-height-match="target: > div">
-                            <div class="uk-width-auto uk-first-column">
-                                <h3 class="uk-h3" style="font-weight: 400">Андрей</h3>
-                                <p class="uk-text-muted">Договор 217/4000 <br> 05.02.2017</p>
-                                <hr class="uk-hr">
-                                <p>20 окон<br> <!-- <span class="uk-h3" style="font-weight: 400">54 000 руб.</span> -->
-                                <!-- </p>
-                                <button class="uk-button uk-button-primary uk-padding-small uk-padding-remove-vertical uk-text-uppercase" href="#" uk-toggle="target: #modal-call">Рассчитать</button>
-                            </div>
-                            <div style="min-height: 226px;">
-                                <p>Хочу поблагодарить компанию WinPlast в лице менеджера А. Сотниковой за успешное завершение работы по установке 20 окон в наш коттедж. Заказывали пластик с ламинацией, чтобы попасть в общую концепцию. Как результат: тепло, светло, красиво, присутствует ощущение простора. Все аккуратно сделано, видно, что работали профи</p>
-                                <div class="uk-text-primary">
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li tabindex="-1">
-                <div class="uk-container uk-container-small">
-                    <div class="uk-background-default uk-box-shadow-medium">
-                        <div class="uk-flex-middle uk-padding uk-child-width-expand@s uk-grid-divider uk-grid" uk-grid="" uk-height-match="target: > div">
-                            <div class="uk-width-auto uk-first-column" style="min-height: 282.141px;">
-                                <h3 class="uk-h3" style="font-weight: 400">Светлана</h3>
-                                <p class="uk-text-muted">Договор 541.09/16С<br> 20.11.2016 в 15:57</p>
-                                <hr class="uk-hr">
-                                <p>22 окна<br> <span class="uk-h3" style="font-weight: 400">543 050 руб.</span></p>
-                                <button class="uk-button uk-button-primary uk-padding-small uk-padding-remove-vertical uk-text-uppercase" href="#" uk-toggle="target: #modal-call">Рассчитать</button>
-                            </div>
-                            <div>
-                                <p>3 октября 2016 года заключили договор №541.09/16С на установку окон в коттедже, заявку приняла менеджер Екатерина Эктова. Монтаж окон поставили на 8 ноября, мы оплатили заказ и до 7-ого ноября забыли про него. Екатерина перезвонила нам 7-ого
-                                    ноября и напомнила о предстоящем монтаже. Бригада Волковых приехала вовремя, окна установили за три дня, согласно графика. Качеством окон и установкой остались очень довольны. Хочу поблагодарить Екатерину, за ее профессиональные рекомендации,
-                                    окна получились очень красивые и отдельное спасибо бригаде Волковых за качественную установку.</p>
-                                <p>PS. Ребята у вас отличная команда, успехов вам и по больше хороших заказов!!!</p>
-                                <div class="uk-text-primary">
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li tabindex="-1">
-                <div class="uk-container uk-container-small">
-                    <div class="uk-background-default uk-box-shadow-medium">
-                        <div class="uk-flex-middle uk-padding uk-child-width-expand@s uk-grid-divider uk-grid" uk-grid="" uk-height-match="target: > div">
-                            <div class="uk-width-auto uk-first-column">
-                                <h3 class="uk-h3" style="font-weight: 400">Анна</h3>
-                                <p class="uk-text-muted">Договор 537.08/16С<br> 19.09.2016 в 16:15</p>
-                                <hr class="uk-hr">
-                                <p>5 окон<br> <span class="uk-h3" style="font-weight: 400">95 410 руб.</span></p>
-                                <button class="uk-button uk-button-primary uk-padding-small uk-padding-remove-vertical uk-text-uppercase" href="#" uk-toggle="target: #modal-call">Рассчитать</button>
-                            </div>
-                            <div style="min-height: 259px;">
-                                <p>Вчера наконец то в моем доме появились новые окошки. Спасибо компании WinPlast! Я тоже испугалась, когда доставку и монтаж отложили на неделю. Но все закончилось благополучно и WinPlast оказалась на высоте. Бригаде Волковых особенная благодарность
-                                    за профессионализм и мастерство. Все сделали красиво и быстро. Спасибо менеджеру по продажам Екатерине и мастерам за хорошую работу. Обязательно буду рекомендовать компанию WinPlast своим друзьям и коллегам.</p>
-                                <div class="uk-text-primary">
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li tabindex="-1">
-                <div class="uk-container uk-container-small">
-                    <div class="uk-background-default uk-box-shadow-medium">
-                        <div class="uk-flex-middle uk-padding uk-child-width-expand@s uk-grid-divider uk-grid" uk-grid="" uk-height-match="target: > div">
-                            <div class="uk-width-auto uk-first-column">
-                                <h3 class="uk-h3" style="font-weight: 400">Елена</h3>
-                                <p class="uk-text-muted">Договор 598.07/16<br> 26.08.2016 в 14:24</p>
-                                <hr class="uk-hr">
-                                <p>8 окон<br> <span class="uk-h3" style="font-weight: 400">85 000 руб.</span></p>
-                                <button class="uk-button uk-button-primary uk-padding-small uk-padding-remove-vertical uk-text-uppercase" href="#" uk-toggle="target: #modal-call">Рассчитать</button>
-                            </div>
-                            <div style="min-height: 259px;">
-                                <p>С 2011 года я знакома с компанией "WinPlast". В 2016 году нами был заключён 3 договор уже по счёту (первые 2- жилые квартиры), на этот раз дом на даче. Очень мне все нравится у них. Чёткие сроки. Пунктуальность. Звонки. И главное для меня -
-                                    цена! Замерщик приехал в Московскую область с точностью до минуты! Человек, знающий своё дело, сработал быстро и чётко. Через 2 недели окна уже стояли во всем доме. Я рада очень. Чисто и аккуратно все. Система скидок хорошая. Скоро будем менять
-                                    дома окно на балконе, конечно же я буду ставить окно только с WinPlast. Спасибо Вам большое!</p>
-                                <div class="uk-text-primary">
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                    <span uk-icon="icon: iconmonstr-star-3" class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svg="iconmonstr-star-3">
-                                            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path>
-                                        </svg></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li> -->
                             </ul>
                             <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin-medium-top">
                                 <li uk-slider-item="0" class="uk-active"><a href="index.html#"></a></li>
@@ -3142,8 +2279,11 @@
                                         <p role="status" aria-live="polite" aria-atomic="true"></p>
                                         <ul></ul>
                                     </div>
-                                    <form action="index.html#wpcf7-f17-o3" method="post" class="wpcf7-form init"
-                                        novalidate="novalidate" data-status="init">
+
+                                    <form class="wpcf7-form init popup__form" enctype="multipart/form-data"
+                                        method="post" id="form" onsubmit="send(event, 'send.php')">
+
+
                                         <div style="display: none;">
                                             <input type="hidden" name="_wpcf7" value="17" />
                                             <input type="hidden" name="_wpcf7_version" value="5.5.6" />
@@ -3163,8 +2303,8 @@
                                                     </path>
                                                 </svg></span>
 
-                                            <span class="wpcf7-form-control-wrap text-81"><input type="text"
-                                                    name="text-81" value="" size="40"
+                                            <span class="wpcf7-form-control-wrap text-81"><input type="text" name="name"
+                                                    value="" size="40"
                                                     class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
                                                     aria-required="true" aria-invalid="false"
                                                     placeholder="Ваше Имя" /></span>
@@ -3181,7 +2321,7 @@
                                                 </svg></span>
 
                                             <span class="wpcf7-form-control-wrap mask-917"><input type="tel"
-                                                    name="mask-917" value=""
+                                                    name="email" value=""
                                                     class="wpcf7-form-control wpcf7mf-mask wpcf7-mask wpcf7-validates-as-required"
                                                     size="40" aria-required="1" placeholder="Ваш номер телефона"
                                                     data-mask="+7 ( ___ ) ___-__-__" /></span>
@@ -3202,27 +2342,7 @@
                                         <div class="wpcf7-response-output" aria-hidden="true"></div>
                                     </form>
                                 </div>
-                                <!-- <form id="form_1492" class="ajax_form " name="SIMPLE_FORM_1" action="/" method="POST" enctype="multipart/form-data" uk-margin="margin: uk-margin-top"><input type="hidden" name="sessid" id="sessid_2" value="497d575ab0322814c21dc68152a10735"><input type="hidden" name="WEB_FORM_ID" value="1"><input type="hidden" name="web_form_submit" value="Y">
-<input id="form_text_3" class="inputtext" type="hidden" name="form_text_3" value="" size="0">
 
-
-<div class="uk-margin uk-first-column">
-	<div class="uk-inline uk-width-1-1">
-		<span class="uk-form-icon uk-icon" uk-icon="icon: iconmonstr-user-1; ratio:.7"><svg xmlns="http://www.w3.org/2000/svg" width="16.799999999999997" height="16.799999999999997" viewBox="0 0 24 24" data-svg="iconmonstr-user-1"><path d="M20.822 18.096c-3.439-.794-6.64-1.49-5.09-4.418 4.72-8.912 1.251-13.678-3.732-13.678-5.082 0-8.464 4.949-3.732 13.678 1.597 2.945-1.725 3.641-5.09 4.418-3.073.71-3.188 2.236-3.178 4.904l.004 1h23.99l.004-.969c.012-2.688-.092-4.222-3.176-4.935z"></path></svg></span>
-		<input class="uk-input" type="text" name="form_text_1" placeholder="Ваше имя">
-	</div>
-</div>
-<div class="uk-margin uk-margin-top uk-first-column">
-	<div class="uk-inline uk-width-1-1">
-		<span class="uk-form-icon uk-icon" uk-icon="icon: iconmonstr-phone-3; ratio: .7"><svg xmlns="http://www.w3.org/2000/svg" width="16.799999999999997" height="16.799999999999997" viewBox="0 0 24 24" data-svg="iconmonstr-phone-3"><path d="M18.48 22.926l-1.193.658c-6.979 3.621-19.082-17.494-12.279-21.484l1.145-.637 3.714 6.467-1.139.632c-2.067 1.245 2.76 9.707 4.879 8.545l1.162-.642 3.711 6.461zm-9.808-22.926l-1.68.975 3.714 6.466 1.681-.975-3.715-6.466zm8.613 14.997l-1.68.975 3.714 6.467 1.681-.975-3.715-6.467z"></path></svg></span>
-		<input class="uk-input" type="tel" name="form_text_2" placeholder="Ваш номер телефона" pattern="\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}" required="">
-	</div>
-</div>
-<div class="uk-margin-top uk-first-column">
-	<button class="uk-button uk-button-primary uk-padding-small uk-padding-remove-vertical uk-width-1-1" type="submit">Заказать по акции</button>
-</div>
-
-</form>						 -->
                             </div>
                         </div>
                     </div>
@@ -3349,7 +2469,7 @@
                     <div class="uk-flex-middle uk-child-width-auto@m uk-grid-large uk-grid" uk-grid="">
                         <div class="uk-width-expand uk-first-column">
                             <div class="uk-flex uk-flex-center uk-flex-left@m">
-                                <!-- <img data-src="./wp-content/themes/wp/img/icon-zamer.png" width="80" height="76" alt="Замер и монтаж" uk-img> -->
+
                                 <a href="index.html#ymap44" class="uk-h4 uk-margin-remove uk-text-primary uk-text-bold"
                                     data-uk-scroll="">Посмотреть на карте</a>
                             </div>
@@ -3366,8 +2486,11 @@
                                         <p role="status" aria-live="polite" aria-atomic="true"></p>
                                         <ul></ul>
                                     </div>
-                                    <form action="index.html#wpcf7-f16-o4" method="post" class="wpcf7-form init"
-                                        novalidate="novalidate" data-status="init">
+
+                                    <form class="wpcf7-form init popup__form" enctype="multipart/form-data"
+                                        method="post" id="form" onsubmit="send(event, 'send.php')">
+
+
                                         <div style="display: none;">
                                             <input type="hidden" name="_wpcf7" value="16" />
                                             <input type="hidden" name="_wpcf7_version" value="5.5.6" />
@@ -3387,8 +2510,8 @@
                                                     </path>
                                                 </svg></span>
 
-                                            <span class="wpcf7-form-control-wrap text-81"><input type="text"
-                                                    name="text-81" value="" size="40"
+                                            <span class="wpcf7-form-control-wrap text-81"><input type="text" name="name"
+                                                    value="" size="40"
                                                     class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
                                                     aria-required="true" aria-invalid="false"
                                                     placeholder="Ваше Имя" /></span>
@@ -3405,7 +2528,7 @@
                                                 </svg></span>
 
                                             <span class="wpcf7-form-control-wrap mask-917"><input type="tel"
-                                                    name="mask-917" value=""
+                                                    name="email" value=""
                                                     class="wpcf7-form-control wpcf7mf-mask wpcf7-mask wpcf7-validates-as-required"
                                                     size="40" aria-required="1" placeholder="Ваш номер телефона"
                                                     data-mask="+7 ( ___ ) ___-__-__" /></span>
@@ -3563,9 +2686,7 @@
                     </div>
                 </div>
             </section>
-            <script>
-                jQuery('li.uk-padding-faq:first').addClass("uk-open");
-            </script>
+
             <section id="contact"
                 class="uk-section uk-section-muted uk-padding-remove-bottom uk-box-shadow-small uk-position-relative">
                 <div class="uk-container">
@@ -3611,10 +2732,7 @@
 
 
 
-                        <!-- <li class="uk-padding-remove-left uk-active"><a class="uk-background-secondary" href="#" aria-expanded="true">Керчь</a></li>
-					<li><a class="uk-background-secondary" href="#" aria-expanded="false">Феодосия</a></li>
-					<li><a class="uk-background-secondary" href="#" aria-expanded="false">Симферополь</a></li>
-					</ul> -->
+
 
 
                         <ul class="contacts-tab-content uk-switcher uk-background-default uk-padding uk-box-shadow-medium"
@@ -4021,6 +3139,10 @@
 
                     </div>
 
+
+
+
+
                     <div class="uk-text-center">
                         <button class="uk-button uk-button-default" type="button" uk-toggle="target: #modal-about">О
                             компании</button>
@@ -4091,8 +3213,9 @@
                     jQuery('.contacts-tab li:nth-child(1)').addClass("uk-active");
                 }
 
-            </script>
+            </>
         -->
+
             <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
             <script>
                 ymaps.ready(function () {
@@ -4304,8 +3427,11 @@
                                         <p role="status" aria-live="polite" aria-atomic="true"></p>
                                         <ul></ul>
                                     </div>
-                                    <form action="index.html#wpcf7-f16-o5" method="post" class="wpcf7-form init"
-                                        novalidate="novalidate" data-status="init">
+
+                                    <form class="wpcf7-form init popup__form" enctype="multipart/form-data"
+                                        method="post" id="form" onsubmit="send(event, 'send.php')">
+
+
                                         <div style="display: none;">
                                             <input type="hidden" name="_wpcf7" value="16" />
                                             <input type="hidden" name="_wpcf7_version" value="5.5.6" />
@@ -4325,8 +3451,8 @@
                                                     </path>
                                                 </svg></span>
 
-                                            <span class="wpcf7-form-control-wrap text-81"><input type="text"
-                                                    name="text-81" value="" size="40"
+                                            <span class="wpcf7-form-control-wrap text-81"><input type="text" name="name"
+                                                    value="" size="40"
                                                     class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
                                                     aria-required="true" aria-invalid="false"
                                                     placeholder="Ваше Имя" /></span>
@@ -4343,7 +3469,7 @@
                                                 </svg></span>
 
                                             <span class="wpcf7-form-control-wrap mask-917"><input type="tel"
-                                                    name="mask-917" value=""
+                                                    name="email" value=""
                                                     class="wpcf7-form-control wpcf7mf-mask wpcf7-mask wpcf7-validates-as-required"
                                                     size="40" aria-required="1" placeholder="Ваш номер телефона"
                                                     data-mask="+7 ( ___ ) ___-__-__" /></span>
@@ -4370,6 +3496,106 @@
                     </div>
                 </div>
             </div>
+
+
+
+            <section class="gallery-grid">
+                <h2 class="gallery-grid__title">Осуществили более 1800 заказов по установке пластиковых окон в
+                    Керчи и
+                    области.</h2>
+                <ul class="gallery-grid__list">
+                    <li class="gallery-grid__item">
+                        <h3 class="gallery-grid__address">ул. 23 мая</h3><img class="gallery-grid__image"
+                            src="./images/gallery/1.jpg" alt="">
+                    </li>
+                    <li class="gallery-grid__item">
+                        <h3 class="gallery-grid__address">ул. Кирова</h3><img class="gallery-grid__image"
+                            src="./images/gallery/2.webp" alt="">
+                    </li>
+                    <li class="gallery-grid__item">
+                        <h3 class="gallery-grid__address">450 квартал</h3><img class="gallery-grid__image"
+                            src="./images/gallery/3.jpg" alt="">
+                    </li>
+                    <li class="gallery-grid__item">
+                        <h3 class="gallery-grid__address">мкр. Героевское</h3><img class="gallery-grid__image"
+                            src="./images/gallery/4.webp" alt="">
+                    </li>
+                    <li class="gallery-grid__item">
+                        <h3 class="gallery-grid__address">Аджимушкай</h3><img class="gallery-grid__image"
+                            src="./images/gallery/5.jpg" alt="">
+                    </li>
+                    <li class="gallery-grid__item">
+                        <h3 class="gallery-grid__address">Индустриальное шоссе</h3><img class="gallery-grid__image"
+                            src="./images/gallery/6.jpg" alt="">
+                    </li>
+                    <li class="gallery-grid__item">
+                        <h3 class="gallery-grid__address">Индустриальное шоссе</h3><img class="gallery-grid__image"
+                            src="./images/gallery/7.jpg" alt="">
+                    </li>
+                    <li class="gallery-grid__item">
+                        <h3 class="gallery-grid__address">ул. Комарова</h3><img class="gallery-grid__image"
+                            src="./images/gallery/8.jpg" alt="">
+                    </li>
+                    <li class="gallery-grid__item">
+                        <h3 class="gallery-grid__address">с. Курортное</h3><img class="gallery-grid__image"
+                            src="./images/gallery/9.jpg" alt="">
+                    </li>
+                    <li class="gallery-grid__item">
+                        <h3 class="gallery-grid__address">с. Тихое</h3><img class="gallery-grid__image"
+                            src="./images/gallery/10.jpg" alt="">
+                    </li>
+                    <li class="gallery-grid__item">
+                        <h3 class="gallery-grid__address">с. Горностаевка</h3><img class="gallery-grid__image"
+                            src="./images/gallery/11.jpg" alt="">
+                    </li>
+                    <li class="gallery-grid__item">
+                        <h3 class="gallery-grid__address">СПК Победа</h3><img class="gallery-grid__image"
+                            src="./images/gallery/12.jpg" alt="">
+                    </li>
+                    <li class="gallery-grid__item">
+                        <h3 class="gallery-grid__address">ул. 1-й пятилетки</h3><img class="gallery-grid__image"
+                            src="./images/gallery/13.jpg" alt="">
+                    </li>
+                    <li class="gallery-grid__item">
+                        <h3 class="gallery-grid__address">ул. Б.Хрони</h3><img class="gallery-grid__image"
+                            src="./images/gallery/14.jpg" alt="">
+                    </li>
+                    <li class="gallery-grid__item">
+                        <h3 class="gallery-grid__address">ул. Ж.Рудневой</h3><img class="gallery-grid__image"
+                            src="./images/gallery/15.jpg" alt="">
+                    </li>
+                    <li class="gallery-grid__item">
+                        <h3 class="gallery-grid__address">ул.Комарова</h3><img class="gallery-grid__image"
+                            src="./images/gallery/16.jpg" alt="">
+                    </li>
+                    <li class="gallery-grid__item">
+                        <h3 class="gallery-grid__address">ул. Штурманская</h3><img class="gallery-grid__image"
+                            src="./images/gallery/17.jpg" alt="">
+                    </li>
+                    <li class="gallery-grid__item">
+                        <h3 class="gallery-grid__address">ул. Шевякова</h3><img class="gallery-grid__image"
+                            src="./images/gallery/18.jpg" alt="">
+                    </li>
+
+
+
+                </ul>
+
+                <!--Картинка-->
+                <div class="popup popup_gallery" id="popup-img">
+                    <!--popup_opened-->
+                    <div class="popup__container-img">
+                        <button class="popup__close" id="popup-close-img" type="button" aria-label="Закрыть"></button>
+                        <img class="popup__image-gallery" id="popup-image-link" src="#" alt="#">
+                        <h2 class="popup__title-gallery" id="popup-img-title">#</h2>
+                    </div>
+                </div>
+            </section>
+
+            <script src="./scripts/index.js"></script>
+
+
+
     </main>
 
     <footer id="footer"
@@ -4461,6 +3687,12 @@
                     </svg></a>
             </div>
         </div>
+
+
+
+
+
+
     </footer>
 
     </div><!-- #page -->
@@ -4665,8 +3897,10 @@
                     <p role="status" aria-live="polite" aria-atomic="true"></p>
                     <ul></ul>
                 </div>
-                <form action="index.html#wpcf7-f13-o6" method="post" class="wpcf7-form init" novalidate="novalidate"
-                    data-status="init">
+
+                <form class="wpcf7-form init popup__form" novalidate="novalidate" enctype="multipart/form-data"
+                    method="post" id="form" onsubmit="send(event, 'send.php')">
+
                     <div style="display: none;">
                         <input type="hidden" name="_wpcf7" value="13" />
                         <input type="hidden" name="_wpcf7_version" value="5.5.6" />
@@ -4676,6 +3910,9 @@
                         <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
                     </div>
                     <h3 class="uk-h3">Закажите бесплатный звонок</h3>
+
+
+
                     <div class="uk-margin uk-first-column relative">
                         <span class="uk-form-icon uk-icon" uk-icon="icon: iconmonstr-user-1; ratio:.7"><svg
                                 xmlns="http://www.w3.org/2000/svg" width="16.799999999999997"
@@ -4685,9 +3922,9 @@
                                 </path>
                             </svg></span>
 
-                        <span class="wpcf7-form-control-wrap text-81"><input type="text" name="text-81" value=""
-                                size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                aria-required="true" aria-invalid="false" placeholder="Ваше Имя" /></span>
+                        <span class="wpcf7-form-control-wrap text-81"><input type="text" name="name" value="" size="40"
+                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true"
+                                aria-invalid="false" placeholder="Ваше Имя" /></span>
                     </div>
                     <div class="uk-margin uk-first-column relative">
                         <span class="uk-form-icon uk-icon" uk-icon="icon: iconmonstr-phone-3; ratio: .7"><svg
@@ -4698,7 +3935,7 @@
                                 </path>
                             </svg></span>
 
-                        <span class="wpcf7-form-control-wrap mask-917"><input type="tel" name="mask-917" value=""
+                        <span class="wpcf7-form-control-wrap mask-917"><input type="tel" name="email" value=""
                                 class="wpcf7-form-control wpcf7mf-mask wpcf7-mask wpcf7-validates-as-required" size="40"
                                 aria-required="1" placeholder="Ваш номер телефона"
                                 data-mask="+7 ( ___ ) ___-__-__" /></span>
@@ -4707,6 +3944,8 @@
                         <input type="submit" value="Отправить"
                             class="wpcf7-form-control has-spinner wpcf7-submit uk-button uk-padding-small uk-button-primary uk-width-1-1" />
                     </div>
+
+
                     <span class="wpcf7-form-control-wrap acceptance-559"><span
                             class="wpcf7-form-control wpcf7-acceptance"><span class="wpcf7-list-item"><label><input
                                         type="checkbox" name="acceptance-559" value="1" aria-invalid="false"
