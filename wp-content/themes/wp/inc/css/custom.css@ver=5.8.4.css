@@ -1,0 +1,885 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i&amp;subset=cyrillic,cyrillic-ext');
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../../fonts/ProximaNova-Light.woff2') format('woff2'),
+        url('../../fonts/ProximaNova-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../../fonts/ProximaNova-Semibold.woff2') format('woff2'),
+        url('../../fonts/ProximaNova-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* New Divider */
+
+.uk-divider-primary.uk-divider-small::after {
+    content: '';
+    display: inline-block;
+    width: 100px;
+    max-width: 100%;
+    border-top: 4px solid #ff1a44;
+    vertical-align: top;
+}
+
+/*Стилизация свитчера в блоке
+Решение «РУСОКОН» для коттеджей*/
+
+.custom-list li.uk-active img {
+    border: 2px solid red;
+}
+
+.custom-list li a {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-list li.uk-active a:before {
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    margin: 0 auto;
+    border: solid transparent;
+    content: ' ';
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 38, 125, 0);
+    border-bottom-color: #ff1a44;
+    border-width: 8px;
+}
+
+@media (max-width: 640px) {
+    .custom-list-padding {
+        padding-right: 30px !important;
+    }
+}
+
+@media (min-width: 640px) {
+    .custom-list li.uk-active a:before {
+        left: 100%;
+        top: 35%;
+        border: solid transparent;
+        content: ' ';
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: rgba(255, 38, 125, 0);
+        border-left-color: #ff1a44;
+        border-width: 8px;
+    }
+}
+
+.custom-list img {
+    border: 2px solid #b0afac;
+    display: block;
+}
+
+@media (min-width: 960px) {
+    .custom-list {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+/*Табы, решение русокон*/
+
+.custom-tab {
+    margin-bottom: 0;
+    z-index: 3;
+    position: relative;
+    top: 10px;
+}
+
+.custom-tab li.uk-active a {
+    background-color: #ff1a44;
+    color: #fff;
+    padding: 24px 0;
+    position: relative;
+    display: block;
+    font-weight: 600;
+}
+
+.custom-tab.uk-tab::before {
+    border-bottom: none;
+}
+
+@media screen and (max-width: 960px) {
+    .switcher-destroy.uk-switcher > :not(.uk-active) {
+        display: block !important;
+    }
+}
+
+/*.custom-tab.uk-tab>* {
+  padding-left: 8px;
+}*/
+
+.custom-tab li:nth-of-type(1n + 2) {
+    padding-left: 10px;
+}
+
+.custom-tab li a {
+    padding: 14px 10px;
+}
+
+.custom-tab-content {
+    z-index: 2;
+    top: -10px;
+    padding-top: 40px;
+}
+
+.custom-tab li.uk-active a:before {
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border: solid transparent;
+    content: ' ';
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 38, 125, 0);
+    border-top-color: #ff1a44;
+    border-width: 10px;
+}
+
+/*Стилизация свитчера в блоке популярных цветов*/
+
+.popular-colors img {
+    border: 2px solid #b0afac;
+}
+
+.popular-colors li a {
+    position: relative;
+    display: inline-block;
+}
+
+.popular-colors li.uk-active img {
+    border: 2px solid #ff1a44;
+}
+
+.popular-colors li.uk-active a:before {
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    margin: 0 auto;
+    border: solid transparent;
+    content: ' ';
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 38, 125, 0);
+    border-bottom-color: #ff1a44;
+    border-width: 8px;
+}
+
+@media (min-width: 960px) {
+    .popular-colors li.uk-active a:before {
+        display: none;
+    }
+}
+
+/*Общий стиль для форм*/
+
+.custom-order {
+    border: 8px solid #ff1a44;
+}
+
+/*Модификатор для форм в банерах,
+в том чисел и статических*/
+
+.custom-order-banner {
+    max-width: 500px;
+    margin: 70px auto 0;
+}
+
+@media (min-width: 960px) {
+    .custom-order-banner {
+        max-width: 100%;
+        margin: 0;
+        float: right;
+    }
+}
+
+/*Стили для форм в статических баннерах*/
+
+.custom-order-static {
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+@media (min-width: 960px) {
+    .custom-order-static {
+        max-width: 100%;
+        margin: 0;
+    }
+}
+
+@media (min-width: 960px) {
+    #cutom-swiper.swiper-slide {
+        padding-top: 70px !important;
+    }
+}
+
+/*Стрелки в главном банере на мобильных*/
+
+.custom-nav {
+    top: 15%;
+}
+
+/*Стрелки в главном банере на десктопах*/
+
+@media (min-width: 960px) {
+    .custom-nav {
+        top: 50%;
+    }
+}
+
+/*Убираем паддинги на десктопах в контенте банера*/
+
+.banner-content {
+    margin-top: 20px;
+}
+
+@media (min-width: 960px) {
+    .banner-content {
+        padding: 0;
+    }
+    .banner-content h3,
+    .banner-content p {
+        /*margin: inherit;*/
+    }
+}
+
+.banner-content h3,
+.banner-content p {
+    margin: 20px auto 0;
+}
+
+@media (min-width: 960px) {
+    .banner-content h3,
+    .banner-content p {
+        margin: 20px 0 0 0;
+    }
+}
+
+/*Раздел контакты, стилизация табов*/
+
+.contacts-tab a {
+    font-size: 10px;
+}
+
+.contacts-tab li.uk-active a {
+    background-color: #ff1a44;
+    color: #fff;
+}
+
+@media (min-width: 640px) {
+    .contacts-tab a {
+        font-size: 16px;
+    }
+    .contacts-tab {
+        margin-bottom: 0;
+        z-index: 1;
+    }
+    .contacts-tab li.uk-active a {
+        background-color: #ff1a44;
+        color: #fff;
+        padding: 24px 0;
+        position: relative;
+        display: block;
+        font-weight: 600;
+    }
+    .contacts-tab.uk-tab::before {
+        border-bottom: none;
+    }
+    .contacts-tab li:nth-of-type(1n + 2) {
+        padding-left: 10px;
+    }
+    .contacts-tab li a {
+        padding: 14px 10px;
+    }
+    @media (min-width: 640px) {
+        .contacts-tab li a {
+            background-color: #57595b;
+            color: #fff;
+        }
+        .contacts-tab li a:hover {
+            color: #fff;
+        }
+    }
+    .contacts-tab-content {
+        /*z-index: 2;*/
+        top: -10px;
+        position: relative;
+    }
+    @media (min-width: 640px) {
+        .contacts-tab-content {
+            padding-top: 40px;
+        }
+    }
+    .contacts-tab li.uk-active a:before {
+        top: 100%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        border: solid transparent;
+        content: ' ';
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: rgba(255, 38, 125, 0);
+        border-top-color: #ff1a44;
+        border-width: 10px;
+    }
+}
+
+.contacts-tab.uk-tab::before {
+    border-bottom: none;
+}
+
+.custom-padding-top {
+    padding-top: 5px;
+}
+
+.custom-accordion > * {
+    border: 3px solid #ddd;
+}
+
+.custom-accordion > .uk-open {
+    border: 3px solid #ff1a44;
+}
+
+.custom-accordion .uk-accordion-title {
+    position: relative;
+    padding-right: 30px;
+}
+
+.custom-accordion .uk-accordion-title::after {
+    position: absolute;
+    top: 24%;
+    right: 0;
+}
+
+#footer {
+    background-color: #2d2f33;
+}
+
+/*Нижний бордер для сабменю*/
+
+#sub-menu li.uk-active a {
+    border-bottom: 4px solid #ff1a44;
+}
+
+/*Блок красота окна*/
+
+.custom-beauty-1,
+.custom-beauty-2,
+.custom-beauty-3,
+.custom-beauty-4,
+.custom-beauty-5,
+.custom-beauty-6,
+.custom-beauty-9,
+.custom-beauty-10,
+.custom-beauty-11,
+.custom-paint {
+    min-height: 300px;
+}
+
+@media (min-width: 640px) {
+    .custom-beauty-1,
+    .custom-beauty-2,
+    .custom-beauty-3,
+    .custom-beauty-4,
+    .custom-beauty-5,
+    .custom-beauty-6,
+    .custom-beauty-9,
+    .custom-beauty-10,
+    .custom-beauty-11,
+    .custom-paint {
+        min-height: 455px;
+    }
+}
+
+.custom-beauty-1 {
+    background-image: url(../../img/beauty-1.jpg);
+}
+
+.custom-beauty-2 {
+    background-image: url(../../img/beauty-2.jpg);
+}
+
+.custom-beauty-3 {
+    background-image: url(../../img/beauty-3.jpg);
+}
+
+.custom-beauty-4 {
+    background-image: url(../../img/beauty-4.jpg);
+}
+
+.custom-beauty-5 {
+    background-image: url(../../img/beauty-5.jpg);
+}
+
+.custom-beauty-6 {
+    background-image: url(../../img/beauty-6.jpg);
+}
+
+/*Слайдер в блоке Декор стекла, витражи и тд*/
+
+.custom-beauty-9 {
+    background-image: url(../../img/beauty-9.jpg);
+}
+
+.custom-beauty-10 {
+    background-image: url(https://rusokon.ru/wp-content/themes/rusokon/img/beauty-10.jpg);
+}
+
+.custom-beauty-11 {
+    background-image: url(https://rusokon.ru/wp-content/themes/rusokon/img/beauty-11.jpg);
+}
+
+/*Блок окрашивание*/
+
+.custom-paint {
+    background-image: url(../../img/beauty-7.jpg);
+}
+
+/*Убираем верхний отступ на мобильных в секциях баннера*/
+
+.custom-slide {
+    padding-top: 0;
+}
+
+@media (min-width: 960px) {
+    .custom-slide {
+        padding-top: 70px;
+    }
+}
+
+/* Video Noise*/
+
+.noise-overlay {
+    background-image: url(../../img/noise.gif);
+    opacity: 0.1;
+}
+
+/* Stopwatch */
+
+.rs-stopwatch-label {
+    padding: 6px 20px;
+    font-size: 1rem;
+    border-radius: 0;
+    position: relative;
+}
+
+/*высота линии в блоке на странице дерево*/
+
+.uk-divider-primary-cont.uk-divider-primary.uk-divider-small::after {
+    border-top: 2px solid #ff1a44;
+    width: 50px;
+}
+
+/*Убираем выравнивание по центру списка на
+дектопах в баннере дерева*/
+
+@media (min-width: 960px) {
+    .custom-l {
+        /*margin: 0;*/
+        margin-left: 0 !important;
+    }
+}
+
+/*Иконки в дереве выравиваются друг под другом на @s*/
+
+@media (min-width: 640px) {
+    .custom-icon-style {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column !important;
+    }
+    /*.custom-par {
+        padding-top: 0;
+    }*/
+}
+
+@media (min-width: 960px) {
+    .custom-par {
+        padding: 0 0 0 10px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .custom-par {
+        padding: 0 0 0 40px;
+    }
+}
+
+/* Happy New Year */
+
+.b-head-decor {
+    display: none;
+}
+
+.b-page_newyear .b-head-decor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 115px;
+    width: 100%;
+    overflow: hidden;
+    background: url(https://rusokon.ru/wp-content/themes/rusokon/img/happynewyear/b-head-decor_newyear.png) repeat-x 0
+        0;
+    z-index: 10;
+}
+
+.b-page_newyear .b-head-decor__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 115px;
+    display: block;
+    width: 373px;
+}
+
+.b-page_newyear .b-head-decor::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -115px;
+    left: 0;
+    z-index: 3;
+    height: 115px;
+    display: block;
+    width: 100%;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.b-page_newyear .b-head-decor__inner_n2 {
+    left: 373px;
+}
+
+.b-page_newyear .b-head-decor__inner_n3 {
+    left: 746px;
+}
+
+.b-page_newyear .b-head-decor__inner_n4 {
+    left: 1119px;
+}
+
+.b-page_newyear .b-head-decor__inner_n5 {
+    left: 1492px;
+}
+
+.b-page_newyear .b-head-decor__inner_n6 {
+    left: 1865px;
+}
+
+.b-page_newyear .b-head-decor__inner_n7 {
+    left: 2238px;
+}
+
+.b-ball {
+    position: absolute;
+}
+
+.b-ball_n1 {
+    top: 0;
+    left: 3px;
+    width: 59px;
+    height: 83px;
+}
+
+.b-ball_n2 {
+    top: -19px;
+    left: 51px;
+    width: 55px;
+    height: 70px;
+}
+
+.b-ball_n3 {
+    top: 9px;
+    left: 88px;
+    width: 49px;
+    height: 67px;
+}
+
+.b-ball_n4 {
+    top: 0;
+    left: 133px;
+    width: 57px;
+    height: 102px;
+}
+
+.b-ball_n5 {
+    top: 0;
+    left: 166px;
+    width: 49px;
+    height: 57px;
+}
+
+.b-ball_n6 {
+    top: 6px;
+    left: 200px;
+    width: 54px;
+    height: 70px;
+}
+
+.b-ball_n7 {
+    top: 0;
+    left: 240px;
+    width: 56px;
+    height: 67px;
+}
+
+.b-ball_n8 {
+    top: 0;
+    left: 283px;
+    width: 54px;
+    height: 53px;
+}
+
+.b-ball_n9 {
+    top: 10px;
+    left: 321px;
+    width: 49px;
+    height: 66px;
+}
+
+.b-ball_n1 .b-ball__i {
+    background: url(https://rusokon.ru/wp-content/themes/rusokon/img/happynewyear/b-ball_n1.png) no-repeat;
+}
+
+.b-ball_n2 .b-ball__i {
+    background: url(https://rusokon.ru/wp-content/themes/rusokon/img/happynewyear/b-ball_n2.png) no-repeat;
+}
+
+.b-ball_n3 .b-ball__i {
+    background: url(https://rusokon.ru/wp-content/themes/rusokon/img/happynewyear/b-ball_n3.png) no-repeat;
+}
+
+.b-ball_n4 .b-ball__i {
+    background: url(https://rusokon.ru/wp-content/themes/rusokon/img/happynewyear/b-ball_n4.png) no-repeat;
+}
+
+.b-ball_n5 .b-ball__i {
+    background: url(https://rusokon.ru/wp-content/themes/rusokon/img/happynewyear/b-ball_n5.png) no-repeat;
+}
+
+.b-ball_n6 .b-ball__i {
+    background: url(https://rusokon.ru/wp-content/themes/rusokon/img/happynewyear/b-ball_n6.png) no-repeat;
+}
+
+.b-ball_n7 .b-ball__i {
+    background: url(https://rusokon.ru/wp-content/themes/rusokon/img/happynewyear/b-ball_n7.png) no-repeat;
+}
+
+.b-ball_n8 .b-ball__i {
+    background: url(https://rusokon.ru/wp-content/themes/rusokon/img/happynewyear/b-ball_n8.png) no-repeat;
+}
+
+.b-ball_n9 .b-ball__i {
+    background: url(https://rusokon.ru/wp-content/themes/rusokon/img/happynewyear/b-ball_n9.png) no-repeat;
+}
+
+.b-ball_i1 .b-ball__i {
+    background: url(https://rusokon.ru/wp-content/themes/rusokon/img/happynewyear/b-ball_i1.png) no-repeat;
+}
+
+.b-ball_i2 .b-ball__i {
+    background: url(https://rusokon.ru/wp-content/themes/rusokon/img/happynewyear/b-ball_i2.png) no-repeat;
+}
+
+.b-ball_i3 .b-ball__i {
+    background: url(https://rusokon.ru/wp-content/themes/rusokon/img/happynewyear/b-ball_i3.png) no-repeat;
+}
+
+.b-ball_i4 .b-ball__i {
+    background: url(https://rusokon.ru/wp-content/themes/rusokon/img/happynewyear/b-ball_i4.png) no-repeat;
+}
+
+.b-ball_i5 .b-ball__i {
+    background: url(https://rusokon.ru/wp-content/themes/rusokon/img/happynewyear/b-ball_i5.png) no-repeat;
+}
+
+.b-ball_i6 .b-ball__i {
+    background: url(https://rusokon.ru/wp-content/themes/rusokon/img/happynewyear/b-ball_i6.png) no-repeat;
+}
+
+.b-ball_i1 {
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 71px;
+}
+
+.b-ball_i2 {
+    top: 0;
+    left: 25px;
+    width: 61px;
+    height: 27px;
+}
+
+.b-ball_i3 {
+    top: 0;
+    left: 176px;
+    width: 29px;
+    height: 31px;
+}
+
+.b-ball_i4 {
+    top: 0;
+    left: 205px;
+    width: 50px;
+    height: 51px;
+}
+
+.b-ball_i5 {
+    top: 0;
+    left: 289px;
+    width: 78px;
+    height: 28px;
+}
+
+.b-ball_i6 {
+    top: 0;
+    left: 367px;
+    width: 6px;
+    height: 69px;
+}
+
+.b-ball__i {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-transform-origin: 50% 0;
+    -moz-transform-origin: 50% 0;
+    -o-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.b-ball_bounce .b-ball__right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 50%;
+    bottom: 0;
+    z-index: 9;
+}
+
+.b-ball_bounce:hover .b-ball__right {
+    display: none;
+}
+
+.b-ball_bounce .b-ball__right:hover {
+    left: 0;
+    display: block !important;
+}
+
+.b-ball_bounce.bounce > .b-ball__i {
+    -webkit-transform: rotate(-9deg);
+    -moz-transform: rotate(-9deg);
+    -o-transform: rotate(-9deg);
+    transform: rotate(-9deg);
+}
+
+.b-ball_bounce .b-ball__right.bounce + .b-ball__i {
+    -webkit-transform: rotate(9deg);
+    -moz-transform: rotate(9deg);
+    -o-transform: rotate(9deg);
+    transform: rotate(9deg);
+}
+
+.b-ball_bounce.bounce1 > .b-ball__i {
+    -webkit-transform: rotate(6deg);
+    -moz-transform: rotate(6deg);
+    -o-transform: rotate(6deg);
+    transform: rotate(6deg);
+}
+
+.b-ball_bounce .b-ball__right.bounce1 + .b-ball__i {
+    -webkit-transform: rotate(-6deg);
+    -moz-transform: rotate(-6deg);
+    -o-transform: rotate(-6deg);
+    transform: rotate(-6deg);
+}
+
+.b-ball_bounce.bounce2 > .b-ball__i {
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+}
+
+.b-ball_bounce .b-ball__right.bounce2 + .b-ball__i {
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    transform: rotate(3deg);
+}
+
+.b-ball_bounce.bounce3 > .b-ball__i {
+    -webkit-transform: rotate(1.5deg);
+    -moz-transform: rotate(1.5deg);
+    -o-transform: rotate(1.5deg);
+    transform: rotate(1.5deg);
+}
+
+.b-ball_bounce .b-ball__right.bounce3 + .b-ball__i {
+    -webkit-transform: rotate(-1.5deg);
+    -moz-transform: rotate(-1.5deg);
+    -o-transform: rotate(-1.5deg);
+    transform: rotate(-1.5deg);
+}
+
+@media (min-width: 960px) {
+    .custom-slide {
+        padding-top: 100px;
+    }
+}
+
+/* Banner
+============================================================== */
+.banner {
+    min-height: 320px;
+}
+
+.banner__partner {
+    width: 50%;
+}
+
+.banner__button__order {
+    height: 140px;
+    width: 140px;
+}
+
+.banner__button__order__text {
+    bottom: 10px;
+    right: 20px;
+}
+
+/* Action */
+
+.action {
+    border: 2px solid #ff1a44;
+    border-radius: 5px;
+    padding: 0 10px;
+}

@@ -1,0 +1,154 @@
+document.addEventListener('DOMContentLoaded', function () {
+	// inputMask();
+
+	//ajaxContactForm();
+
+	//--- Barba.js
+	Barba.Pjax.start();
+
+	Barba.Pjax.originalPreventCheck = Barba.Pjax.preventCheck;
+
+	Barba.Pjax.preventCheck = function (evt, element) {
+		if (!Barba.Pjax.originalPreventCheck(evt, element)) {
+			return false;
+		}
+		if (!element.classList.contains('_barba')) {
+			return false;
+		}
+		return true;
+	};
+
+	Barba.Dispatcher.on('newPageReady', function (current, prev, container) {
+		// var rsScroll = document.getElementById('sub-menu');
+		// UIkit.scroll('#sub-menu').scrollTo(rsScroll);
+	});
+
+	Barba.Dispatcher.on('transitionCompleted', function (current, prev, container) {
+		// inputMask();
+		// ajaxContactForm();
+	});
+
+	Barba.Dispatcher.on('linkClicked', function (el) {
+		var elements = el.parentNode.parentNode.querySelectorAll('li');
+		for (var i = 0; i < elements.length; i++) {
+			elements[i].classList.remove('uk-active');
+		}
+		el.parentNode.classList.add('uk-active');
+	});
+
+	var link = document.getElementById('ul-contacts');
+	if (link) {
+		link.style.display = 'none';
+		link.style.visibility = 'hidden';
+	}
+	return false;
+});
+
+//--- Inputmask
+// function inputMask() {
+// 	Inputmask({
+// 		// placeholder: '_',
+// 		showMaskOnHover: false,
+// 		mask: '+7 (999) 999-99-99'
+// 	}).mask(document.querySelectorAll('input[type="tel"]'));
+// }
+
+//--- Ajax Form
+function ajaxContactForm() {
+	var a = document.querySelectorAll('.ajax_form');
+	[].forEach.call(a, function (el) {
+		el.onsubmit = function (a) {
+			var data = new FormData(el);
+			var request = new XMLHttpRequest();
+			request.open('POST', '/api/?t=form', true);
+			// request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+			request.send(data);
+			el.reset();
+			// el.trigger('reset');
+			UIkit.modal.alert('Спасибо за обращение. Наш менеджер свяжется с Вами в ближайшее время.');
+			return false;
+		};
+	});
+}
+
+// RU Phone Inputmask
+jQuery(document).ready(function () {
+	function addSybmol(c, d, e) {
+		c.length > d && c[d] != e && c.splice(d, 0, e);
+		return c
+	}
+	var a, b;
+	document.querySelector("input[type='tel']").onselect = function () {
+		a = document.querySelector("input[type='tel']").selectionStart;
+		b = document.querySelector("input[type='tel']").selectionEnd
+	};
+	jQuery("input[type='tel']").on("input", function (c, d) {
+		$this = jQuery(this);
+		allows = "1234567890".split("");
+		key = c.originalEvent.data;
+		$caret = c.target.selectionStart;
+		$val = $this.val();
+		rep = "";
+		a && b && (rep = 0 < b - a ? Array(b - a).join("_") : "");
+		"deleteContentBackward" == c.originalEvent.inputType ? ($val = $val.substr(0, $caret) + "_" + rep + $val.substr($caret), c.preventDefault()) : -1 < $val.indexOf("_") && ($val = $val.substr(0, $caret) + $val.substr($caret).replace("_", ""));
+		val = $val.replace(/\s/g, "").replace("+", "").replace("(", "").replace(")",
+			"").replace(/\-/g, "");
+		val = 11 <= val.length ? val = val.substr(0, 11) : val; - 1 == jQuery.inArray(key, allows) && (c.preventDefault(), val = val.replace(key, ""));
+		ar = val.split("");
+		if (0 == ar.join("").replace(/_/g, "").length || "+" == ar.join("").replace(/_/g, "")) ar = [];
+		0 < ar.length && (8 != ar[0] && 7 != ar[0] && "+" != ar[0] && (tmp = ar[0], ar[0] = "7", ar[1] = tmp, $caret = 5), ar = addSybmol(ar, 1, " "), ar = addSybmol(ar, 2, "("), ar = addSybmol(ar, 6, ")"), ar = addSybmol(ar, 7, " "), ar = addSybmol(ar, 11, "-"), ar = addSybmol(ar, 14, "-"));
+		c.preventDefault();
+		$new_val = "7" ==
+			ar[0] || 0 === ar.length ? "+" + ar.join("") : ar.join("");
+		"+" == $new_val && "+" != key && ($new_val = "");
+		$this.val($new_val);
+		$new_caret = "deleteContentBackward" == c.originalEvent.inputType ? 8 == ar[0] ? 2 == $caret ? 1 : 7 == $caret ? 6 : 12 == $caret ? 11 : 15 == $caret ? 14 : $caret : 3 == $caret ? 2 : 8 == $caret ? 7 : 13 == $caret ? 12 : 16 == $caret ? 15 : 1 == $caret ? 3 : $caret : 8 == ar[0] ? 2 == $caret ? 4 : 7 == $caret ? 9 : 12 == $caret ? 13 : 15 == $caret ? 16 : $caret : 3 == $caret ? 5 : 8 == $caret ? "10" : 13 == $caret ? 14 : "16" == $caret ? 17 : $caret;
+		$(this)[0].setSelectionRange($new_caret, $new_caret);
+	});
+});
+
+document.addEventListener('wpcf7mailsent', function (event) {
+	setTimeout(function () {
+		jQuery('#modal-call').removeClass('uk-open');
+		jQuery('.uk-modal-page').css({
+			'overflow': 'auto',
+		});
+	}, 5000);
+});
+
+//name of title
+jQuery(window).on("load", function () {
+	jQuery('.uk-button').click(function () {
+		find = jQuery(this).closest('.item-window').find('.title-window');
+		title = jQuery(find).text();
+		jQuery('.hide-title').val(title);
+		article = jQuery(this).closest('.item-window').find('.article');
+		title2 = jQuery(article).text();
+		jQuery('.hide-title2').val(title2);
+		// console.log(title2);
+	});
+})
+
+// jQuery(document).ready(function ($) {
+// 	$(document).on('load', function () {
+// 		$('.wood_tab').removeClass('uk-active');
+// 	});
+// });
+
+
+// function load() {
+// 	const tab = document.querySelectorAll('.wood_tab');
+// 	if (tab.classList.contains('uk-active')) {
+// 		tab.classList.remove('uk-active');
+// 	}
+// }
+// window.onload = load;
+
+// window.onload = function () {
+
+// 	const tab = document.querySelector('.wood_tab');
+
+// 	tab.classList.remove('uk-active');
+
+
+// }
