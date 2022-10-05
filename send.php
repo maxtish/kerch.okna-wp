@@ -12,12 +12,12 @@ $text = $_POST['text'];
 $file = $_FILES['myfile'];
 
 // Формирование самого письма
-$title = "Заголовок письма";
+$title = "ОБРАТНЫЙ ЗВОНОК";
 $body = "
-<h2>Новое письмо</h2>
+<h2>Заказ с сайта WinPlast-Севастополь</h2>
 <b>Имя:</b> $name<br>
-<b>Почта:</b> $email<br><br>
-<b>Сообщение:</b><br>$text
+<b>Телефон:</b> $email<br><br>
+<b>Город:</b><br>$text
 ";
 
 // Настройки PHPMailer
@@ -33,11 +33,11 @@ try {
 
     // Настройки вашей почты
     $mail->Host       = 'ssl://smtp.yandex.ru'; // SMTP сервера вашей почты
-    $mail->Username   = 'rd-max@yandex.ru'; // Логин на почте
-    $mail->Password   = 'boywfxkrsmgawpcw'; // Пароль на почте
+    $mail->Username   = 'parsingrd-max@yandex.ru'; // Логин на почте
+    $mail->Password   = 'mgvygkmhfmmkjeya'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('rd-max@yandex.ru', 'Заказ с сайта КЕРЧЬ'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('parsingrd-max@yandex.ru', 'Заказ с сайта WinPlast - Севастополь'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
     $mail->addAddress('rd-max@ya.ru');  
